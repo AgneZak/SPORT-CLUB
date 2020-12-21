@@ -10,7 +10,7 @@
     <?php endforeach; ?>
 
 </head>
-<body class="index__body">
+<body>
 <header>
     <?php print $data['header'] ?>
 </header>
