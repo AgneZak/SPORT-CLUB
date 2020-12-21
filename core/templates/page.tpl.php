@@ -15,5 +15,8 @@
 <main>
     <?php print $data['content']; ?>
 </main>
+<footer>
+    <p>© 2019. Agne Zakaitė, all rights reserved.</p>
+</footer>
 </body>
 </html>

@@ -21,8 +21,9 @@ main {
     padding-top: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    min-height: 100vh;
+
 }
 
 h1, h2, h3, h4 {
@@ -122,25 +123,22 @@ button:hover {
 ##  Navigation
 ########################*/
 header{
+    display: flex;
+    align-items: center;
     height: 70px;
     width: 100%;
     background-color: peachpuff;
-
 }
 nav {
     display: flex;
-    justify-content: center;
-    padding: 20px;
+    justify-content: space-between;
     width: 800px;
     margin: 0 auto;
 }
 
 ul {
     display: flex;
-    justify-content: flex-end;
     list-style: none;
-    padding: 0;
-    align-items: center;
 }
 
 a {
@@ -149,14 +147,25 @@ a {
     background-color: peachpuff;
     text-decoration: none;
     font-weight: 600;
-    /*margin: 30px;*/
-    font-size: 25px;
     cursor: pointer;
 }
 
 a:hover {
     color: black;
     transition: 0.4s;
+}
+
+/*######################
+##  Footer
+########################*/
+
+footer{
+    height: 70px;
+    width: 100%;
+    background-color: peachpuff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
