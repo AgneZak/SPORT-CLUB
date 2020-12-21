@@ -16,6 +16,7 @@ class FeedbackBaseForm extends Form
                     'type' => 'textarea',
                     'validators' => [
                         'validate_field_not_empty'
+                        //TODO ● komentaras negali viršyti 500 simbolių
                     ],
                     'extra' => [
                         'attr' => [
