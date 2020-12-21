@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 body {
@@ -32,7 +34,7 @@ main {
 }
 
 .title {
-    font-family: 'Bangers', cursive;
+    font-weight: 700;
     font-size: 50px;
     margin: 50px;
 }
@@ -83,8 +85,8 @@ button {
     color: white;
     width: 150px;
     border: 2px solid white;
-    font-family: 'Bangers', cursive;
     cursor: pointer;
+    font-weight: 700;
 }
 
 button:hover {
@@ -119,15 +121,18 @@ button:hover {
 /*######################
 ##  Navigation
 ########################*/
+header{
+    height: 70px;
+    width: 100%;
+    background-color: peachpuff;
 
+}
 nav {
     display: flex;
     justify-content: center;
-    background-color: peachpuff;
-    width: 100vw;
     padding: 20px;
-    font-family: 'Bangers', cursive;
-    font-size: 40px;
+    width: 800px;
+    margin: 0 auto;
 }
 
 ul {
@@ -143,15 +148,15 @@ a {
     color: white;
     background-color: peachpuff;
     text-decoration: none;
+    font-weight: 600;
     /*margin: 30px;*/
     font-size: 25px;
     cursor: pointer;
-    transition: 0.4s;
-    font-family: 'Bangers', cursive;
 }
 
 a:hover {
     color: black;
+    transition: 0.4s;
 }
 
 

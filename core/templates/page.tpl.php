@@ -11,9 +11,7 @@
 
 </head>
 <body>
-<header>
     <?php print $data['header'] ?>
-</header>
 <main>
     <?php print $data['content']; ?>
 </main>
