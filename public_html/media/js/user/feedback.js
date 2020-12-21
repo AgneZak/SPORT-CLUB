@@ -154,7 +154,7 @@ const forms = {
                 console.log('Form errors received', errors);
 
                 Object.keys(errors).forEach(function (error_id) {
-                    const field = form.querySelector('input[name="' + error_id + '"]');
+                    const field = form.querySelector('textarea[name="' + error_id + '"]');
                     if (field) {
                         const span = document.createElement("span");
                         span.className = 'field-error';
