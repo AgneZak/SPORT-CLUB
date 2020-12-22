@@ -128,15 +128,16 @@ const forms = {
             });
         }
         ,
-        flash:
-            function (element, class_name) {
+        flash: {
+            class: function(element, class_name) {
                 const prev = element.className;
 
                 element.className += class_name;
                 setTimeout(function () {
                     element.className = prev;
                 }, 1000);
-            },
+            }
+        },
         /**
          * Form-error related functionality
          */
