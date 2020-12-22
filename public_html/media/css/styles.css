@@ -25,10 +25,6 @@ main {
     width: 100%;
 }
 
-h1, h2, h3, h4 {
-    margin: 10px;
-}
-
 .title {
     font-weight: 700;
     font-size: 50px;
@@ -45,14 +41,16 @@ tr, td, th {
     margin: 10px;
     padding: 10px;
 }
-
+footer p{
+    color: white;
+    font-weight: 400;
+}
 
 /*######################
 ##  Form
 ########################*/
 
 form {
-    width: 400px;
     margin: 20px 0;
     background-color: peachpuff;
     padding: 20px;
@@ -63,16 +61,22 @@ form p {
 }
 
 label {
-    font-family: Arial;
+    font-family: Arial sans-serif;
+    width: 100%;
 }
 
 input {
     padding: 7px;
     margin: 5px;
+    outline: coral;
 }
 
 textarea {
     padding: 20px;
+    width: 100%;
+    resize: none;
+    overflow: auto;
+    outline: none;
 }
 
 button {
@@ -84,6 +88,7 @@ button {
     border: 2px solid white;
     cursor: pointer;
     font-weight: 700;
+    outline: coral;
 }
 
 button:hover {
@@ -91,40 +96,29 @@ button:hover {
     color: orangered;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: peachpuff;
-}
-
-.modal .close {
-    color: white;
-    font-size: 50px;
-    cursor: pointer;
-}
 
 .error {
     color: red;
     font-size: .8em;
 }
-.field-error{
+
+.field-error {
     color: red;
     font-size: .8em;
     display: block;
 }
+
 /*######################
 ##  Navigation
 ########################*/
-header{
+header {
     display: flex;
     align-items: center;
     height: 70px;
     width: 100%;
     background-color: peachpuff;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -155,7 +149,7 @@ a:hover {
 ##  Footer
 ########################*/
 
-footer{
+footer {
     height: 70px;
     width: 100%;
     background-color: peachpuff;
@@ -166,9 +160,35 @@ footer{
 
 
 /*######################
+##  Feedback Page
+########################*/
+.feedback-title{
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: initial;
+}
+.feedback-container{
+    margin: 20px 0;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+.message{
+    margin: 10px 0;
+}
+#feedback-create-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*######################
 ##  Index Page
 ########################*/
-.hero-image{
+.hero-image {
     height: 300px;
     width: 100%;
     background: rgba(224, 138, 63, 0.3) url('../img/sport-congresse.jpg') no-repeat center;
@@ -179,11 +199,58 @@ footer{
     align-items: center;
 }
 
+.container {
+    margin: 20px 0;
+    width: 800px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.container-item {
+    border: 1px solid lightgrey;
+    width: calc(800px / 4);
+}
+.item-description-container{
+    padding: 0 5px 5px 5px;
+}
+.item-name {
+    font-weight: 400;
+    text-align: center;
+    margin: 10px 0;
+}
+.item-img{
+    height: 40%;
+    width: 100%;
+}
+.workouts {
+    background: url('../img/group-fitness-benefits.jpg') no-repeat center;
+    background-size: cover;
+}
+.lounge {
+    background: url('../img/lounge.jpg') no-repeat center;
+    background-size: cover;
+}
+.gym{
+    background: url('../img/Gym-1-1.jpg') no-repeat center;
+    background-size: cover;
+}
+.map{
+    width: 100%;
+}
+iframe{
+    width: 100%;
+    height: 300px;
+    border: none;
+}
 @media only screen and (max-width: 400px) {
-    .hero-image{
+    .hero-image {
         height: 150px;
     }
-    .title{
+
+    .title {
         font-size: revert;
     }
 }

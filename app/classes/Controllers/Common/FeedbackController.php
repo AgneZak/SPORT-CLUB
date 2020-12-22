@@ -30,12 +30,6 @@ class FeedbackController
                 'create' => (new FeedbackCreateForm())->render(),
             ];
 
-            $links = [
-                'register' => (new Link([
-                    'url' => App::$router::getUrl('logout'),
-                    'text' => 'Logout'
-                ]))->render()
-            ];
         } else {
             $msg = 'Want to write a comment?';
             $links = [
