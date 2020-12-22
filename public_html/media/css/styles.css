@@ -51,8 +51,7 @@ tr, td, th {
 }
 
 tr,
-td
-{
+td {
     opacity: 0;
     animation-name: fadeIn;
     animation-duration: 3s;
@@ -69,6 +68,16 @@ td
         border-bottom: 1px solid lightgrey;
         opacity: 1;
     }
+}
+
+.comment {
+    width: 500px;
+}
+
+.name,
+.id,
+.date {
+    text-align: center;
 }
 
 /*######################
@@ -210,9 +219,6 @@ footer {
     justify-content: center;
     align-items: center;
 }
-.comment{
-    width: 500px;
-}
 
 /*######################
 ##  Index Page
@@ -306,9 +312,11 @@ iframe {
     .container > *:first-child {
         margin-top: 0;
     }
+
     .container > *:last-child {
         margin-bottom: 0;
     }
+
     .item-img {
         height: calc(200px / 2.5);
     }
@@ -318,10 +326,12 @@ iframe {
         margin: 20px 20px;
     }
 }
+
 @media screen and (max-width: 800px) and (min-width: 400px) {
-    .container{
+    .container {
         width: 100%;
     }
+
     .feedback-container {
         width: auto;
         margin: 20px 20px;
