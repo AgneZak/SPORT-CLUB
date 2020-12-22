@@ -65,7 +65,7 @@ class FeedbackApiController extends AuthController
     }
 
     /**
-     * Returns formatted time from timestamp given in row.
+     * Returns formatted time from time().
      *
      * @param $time
      * @return string
