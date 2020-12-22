@@ -55,8 +55,8 @@ class HomeController
                     your goals—and together, you'll work to unlock the results you want.",
                     'img-class' => 'gym'
                 ]
-
             ],
+            'iframe-src' => 'https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Sauletekio%20al.%2015+(Spots%20Club)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'
         ]))->render(ROOT . '/app/templates/content/index.tpl.php');
 
         $this->page->setContent($content);

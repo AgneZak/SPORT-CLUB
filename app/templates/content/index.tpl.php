@@ -17,5 +17,5 @@
 
 </section>
 <div class="map">
-    <iframe src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Sauletekio%20al.%2015+(Spots%20Club)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    <iframe src="<?php print $data['iframe-src']; ?>"></iframe>
 </div>
