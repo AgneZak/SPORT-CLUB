@@ -32,7 +32,7 @@ class FeedbackApiController extends AuthController
 
             $feedback['id'] = App::$db->insertRow('feedback', $form->values() + [
                     'user_id' => $user_id,
-                    'timestamp' => time()
+                    'date' => $this->timeFormat(time())
                 ]);
 
             $feedback = $this->buildRow($logged_user, $feedback);
@@ -50,7 +50,7 @@ class FeedbackApiController extends AuthController
      * Formats row for json to be used in update method,
      * so that the data would be updated in the same format.
      *
-     * @param $user_id
+     * @param $user
      * @param $feedback
      * @return array
      */
@@ -60,7 +60,7 @@ class FeedbackApiController extends AuthController
             'id' => $feedback['id'],
             'name' => $user['name'],
             'comment' => $feedback['comment'],
-            'timestamp' => $this->timeFormat(time())
+            'date' => $this->timeFormat(time())
         ];
     }
 
