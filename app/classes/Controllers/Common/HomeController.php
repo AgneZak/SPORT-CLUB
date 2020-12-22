@@ -24,7 +24,7 @@ class HomeController
     public function __construct()
     {
         $this->page = new BasePage([
-            'title' => 'Sporto Klubas'
+            'title' => 'Sport Club'
         ]);
     }
 
