@@ -72,24 +72,8 @@ class FeedbackApiController extends AuthController
      */
     private function timeFormat($time)
     {
-        $timeStamp = date('Y-m-d H:i:s', $time);
-        $difference = abs(strtotime("now") - strtotime($timeStamp));
-        $days = floor($difference / (3600 * 24));
-        $hours = floor($difference / 3600);
-        $minutes = floor(($difference - ($hours * 3600)) / 60);
-        $seconds = floor($difference % 60);
+        date_default_timezone_set('Europe/Vilnius');
 
-        if ($days) {
-            $hours = $hours - 24;
-            $result = "{$days}d {$hours}:{$minutes} H";
-        } elseif ($minutes) {
-            $result = "{$minutes} min";
-        } elseif ($hours) {
-            $result = "{$hours}:{$minutes} H";
-        } else {
-            $result = "{$seconds} seconds";
-        }
-
-        return $result;
+        return date('Y-m-d H:i', $time);
     }
 }
