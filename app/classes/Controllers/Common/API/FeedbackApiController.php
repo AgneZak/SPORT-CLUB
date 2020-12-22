@@ -63,11 +63,13 @@ class FeedbackApiController
      */
     private function buildRows($feedbacks)
     {
+
         foreach ($feedbacks as $id => &$row) {
+            $user = App::$db->getRowById('users', $row['user_id']);
 
             $row = [
                 'id' => $id,
-                'name' => $row['name'],
+                'name' => $user['name'],
                 'comment' => $row['comment'],
                 'timestamp' => $this->timeFormat($row)
             ];

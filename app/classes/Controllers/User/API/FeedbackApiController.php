@@ -19,15 +19,23 @@ class FeedbackApiController extends AuthController
         $form = new FeedbackCreateForm();
 
         if ($form->validate()) {
-            $user = App::$session->getUser();
+            $users = App::$db->getRowsWhere('users');
+            $logged_user = App::$session->getUser();
+
+            foreach ($users as $id => $user) {
+                if ($logged_user['email'] === $user['email']) {
+                    $user_id = $id;
+                }
+            }
 
             $feedback = $form->values();
+
             $feedback['id'] = App::$db->insertRow('feedback', $form->values() + [
-                    'name' => $user['name'],
+                    'user_id' => $user_id,
                     'timestamp' => time()
                 ]);
 
-            $feedback = $this->buildRow($user, $feedback);
+            $feedback = $this->buildRow($logged_user, $feedback);
             $response->setData($feedback);
         } else {
             $response->setErrors($form->getErrors());
@@ -42,7 +50,7 @@ class FeedbackApiController extends AuthController
      * Formats row for json to be used in update method,
      * so that the data would be updated in the same format.
      *
-     * @param $user
+     * @param $user_id
      * @param $feedback
      * @return array
      */
