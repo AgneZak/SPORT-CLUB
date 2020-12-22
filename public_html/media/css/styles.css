@@ -174,7 +174,8 @@ a:hover {
 }
 
 .active {
-    border: 1px solid yellow
+    border-radius: 5px;
+    border: 2px solid coral;
 }
 
 
