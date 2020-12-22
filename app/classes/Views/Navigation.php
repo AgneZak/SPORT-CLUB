@@ -23,16 +23,16 @@ class Navigation extends View
 
         if (App::$session->getUser()) {
             return $nav + [
-                'right' => [
-                    App::$router::getUrl('logout') => 'Logout'
-                ]
+                    'right' => [
+                        App::$router::getUrl('logout') => 'Logout'
+                    ]
                 ];
         } else {
             return $nav + [
-                'right' => [
-                    App::$router::getUrl('register') => 'Register',
-                    App::$router::getUrl('login') => 'Login'
-                ]
+                    'right' => [
+                        App::$router::getUrl('register') => 'Register',
+                        App::$router::getUrl('login') => 'Login'
+                    ]
                 ];
         }
     }

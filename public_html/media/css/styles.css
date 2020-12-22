@@ -173,6 +173,11 @@ a:hover {
     transition: 0.4s;
 }
 
+.active {
+    border: 1px solid yellow
+}
+
+
 /*######################
 ##  Footer
 ########################*/
