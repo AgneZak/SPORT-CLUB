@@ -163,6 +163,13 @@ function validate_url(string $field_value, array &$field): bool
     return true;
 }
 
+/**
+ * Checks if symbols or numbers are written
+ *
+ * @param string $field_input
+ * @param array $field
+ * @return bool
+ */
 function validate_no_special_chars(string $field_input, array &$field): bool
 {
     $field_values_array = str_split($field_input);
@@ -178,6 +185,14 @@ function validate_no_special_chars(string $field_input, array &$field): bool
     return true;
 }
 
+/**
+ * Checks number of symbols were written in and compares the number to given params number
+ *
+ * @param string $field_input
+ * @param array $field
+ * @param array $params
+ * @return bool
+ */
 function validate_number_of_symbols(string $field_input, array &$field, array $params): bool
 {
     if (strlen($field_input) > $params['max']) {

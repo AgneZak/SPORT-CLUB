@@ -32,12 +32,6 @@ main {
     text-shadow: 2px 2px black;
 }
 
-
-footer p {
-    color: white;
-    font-weight: 400;
-}
-
 /*######################
 ##  Table
 ########################*/
@@ -81,7 +75,7 @@ td {
 }
 
 /*######################
-##  Form
+##  Forms
 ########################*/
 
 form {
@@ -192,6 +186,10 @@ footer {
     align-items: center;
 }
 
+footer p {
+    color: white;
+    font-weight: 400;
+}
 
 /*######################
 ##  Feedback Page

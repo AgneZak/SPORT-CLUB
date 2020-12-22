@@ -58,7 +58,13 @@ function validate_login(array $filtered_input, array &$form): bool
     return false;
 }
 
-
+/**
+ * Checks if user exist in database.
+ *
+ * @param string $field_input
+ * @param array $field
+ * @return bool
+ */
 function validate_user_exists(string $field_input, array &$field): bool
 {
     if (App::$db->getRowWhere('users', ['email' => $field_input])) {

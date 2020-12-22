@@ -7,7 +7,7 @@ use Core\View;
 
 class HomeController
 {
-    protected $page;
+    protected BasePage $page;
 
     /**
      * Controller constructor.
@@ -37,7 +37,7 @@ class HomeController
     public function index(): ?string
     {
         $content = (new View([
-            'title' => 'Welcome to our Sports Club',
+            'title' => 'Welcome to our Sport Club',
             'img-class' => 'hero-image',
             'services' => [
                 'Group workouts' => [

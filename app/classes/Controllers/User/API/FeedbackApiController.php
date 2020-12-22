@@ -47,7 +47,7 @@ class FeedbackApiController extends AuthController
 
 
     /**
-     * Formats row for json to be used in update method,
+     * Formats row for json to be used in create method,
      * so that the data would be updated in the same format.
      *
      * @param $user

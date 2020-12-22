@@ -32,6 +32,7 @@ class FeedbackController
 
         } else {
             $msg = 'Want to write a comment?';
+
             $links = [
                 'register' => (new Link([
                     'url' => App::$router::getUrl('register'),
