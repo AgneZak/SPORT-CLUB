@@ -124,7 +124,6 @@ button:hover {
     color: orangered;
 }
 
-
 .error {
     color: red;
     font-size: .8em;
@@ -139,6 +138,7 @@ button:hover {
 /*######################
 ##  Navigation
 ########################*/
+
 header {
     display: flex;
     align-items: center;
@@ -178,7 +178,6 @@ a:hover {
     border: 2px solid coral;
 }
 
-
 /*######################
 ##  Footer
 ########################*/
@@ -200,6 +199,7 @@ footer p {
 /*######################
 ##  Feedback Page
 ########################*/
+
 .feedback-title {
     margin-bottom: 20px;
     font-weight: 700;
@@ -227,6 +227,7 @@ footer p {
 /*######################
 ##  Index Page
 ########################*/
+
 .hero-image {
     height: 300px;
     width: 100%;
@@ -291,6 +292,10 @@ iframe {
     height: 300px;
     border: none;
 }
+
+/*######################
+##  Media Query
+########################*/
 
 @media only screen and (max-width: 400px) {
     .hero-image {
