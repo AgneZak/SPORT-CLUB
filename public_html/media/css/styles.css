@@ -18,26 +18,22 @@ body {
 }
 
 main {
-    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-
+    width: 100%;
 }
 
 h1, h2, h3, h4 {
     margin: 10px;
 }
 
-main {
-    margin-bottom: 50px;
-}
-
 .title {
     font-weight: 700;
     font-size: 50px;
-    margin: 50px;
+    color: aliceblue;
+    text-shadow: 2px 2px black;
 }
 
 table, th, td {
@@ -172,3 +168,22 @@ footer{
 /*######################
 ##  Index Page
 ########################*/
+.hero-image{
+    height: 300px;
+    width: 100%;
+    background: rgba(224, 138, 63, 0.3) url('../img/sport-congresse.jpg') no-repeat center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 400px) {
+    .hero-image{
+        height: 150px;
+    }
+    .title{
+        font-size: revert;
+    }
+}
