@@ -2,11 +2,11 @@
 
 const endpoints = {
     get: '/api/feedback/get',
-    create: '/api/feedback/create',
+    create: '/api/feedback/create'
 };
 
 /**
- * This defines how JS code selects elements by ID
+ * This defines how JS code selects elements by ID and classname(table)
  */
 const selectors = {
     forms: {
